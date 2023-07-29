@@ -21,10 +21,10 @@ def check_status_code():
 
 def set_schedule_request():
     time_value = time_entry.get()
-    time_label.config(text=f"Request Scheduled for: {time_value}")
+    scheduled_time_label.config(text=f"Request Scheduled for: {time_value}")
 
 def update_time():
-    current_time = time.strftime("%I:%M:%S")
+    current_time = time.strftime("%I:%M %p")
     clock_label.config(text=f"Current Time: {current_time}")
     window.after(1000, update_time)
 
@@ -37,8 +37,8 @@ window.title("HTTP Status Checker")
 clock_label = tk.Label(window)
 clock_label.pack()
 
-time_label = tk.Label(window, text="Request Scheduled for: --:--:--")
-time_label.pack()
+scheduled_time_label = tk.Label(window, text="Request Scheduled for: --:--:--")
+scheduled_time_label.pack()
 
 
 # URL 
