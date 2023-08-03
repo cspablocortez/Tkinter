@@ -1,37 +1,27 @@
 import tkinter as tk
-import requests
 import time
-
-def check_status_code():
-    link_value = link_entry.get()
-    print("Link value:", link_value)
-    
-    try:
-        response = requests.get(link_value)
-        status_code = response.status_code
-        status_label.config(text=f"HTTP Status Code: {status_code}")
-
-        headers = response.headers
-        print(headers)
-        headers_label.config(text=f"Request Header Received:\n{headers['Date']}")
-    except requests.RequestException as e:
-        status_label.config(text=f"Error: {str(e)}")
-    except ValueError:
-        status_label.config(text="Error: Invalid Input")
+from timer import time_left_until_input_time
 
 def set_schedule_request():
-    time_value = time_entry.get()
-    scheduled_time_label.config(text=f"Request Scheduled for: {time_value}")
+    try:
+        time_value = time_entry.get()
+        hours = int(time_value[:2])
+        minutes = int(time_value[-2:])
+        # time_left_until_input_time(hours, minutes)
+        scheduled_time_label.config(text=f"Request Scheduled for: {time_value}")
+    except ValueError:
+        print("Invalid input. Please enter valid integer values for hours and minutes.")
+    
 
 def update_time():
-    current_time = time.strftime("%I:%M %p")
+    current_time = time.strftime("%H:%M")
     clock_label.config(text=f"Current Time: {current_time}")
     window.after(1000, update_time)
 
 # app window
 window = tk.Tk()
 window.geometry("480x320")
-window.title("HTTP Status Checker")
+window.title("HTTP Scheduler")
 
 # Clock (shows current time)
 clock_label = tk.Label(window)
@@ -57,14 +47,11 @@ time_entry.pack()
 go_button = tk.Button(window, text="Schedule Request", command=set_schedule_request)
 go_button.pack()
 
-# Display status code response
-
-status_label = tk.Label(window, text="HTTP Status Code: ---")
-status_label.pack()
-
-headers_label = tk.Label(window, text="Request Header Received: ---")
-headers_label.pack()
-
+# Label for Time Left
+remaining_time_label = tk.Label(window, text="Remaining Time: ")
+remaining_time_label.pack()
 
 update_time()
 window.mainloop()
+
+
