@@ -34,7 +34,7 @@ def update_time():
         remaining_time_str = str(remaining_time).split(".")[0]
         remaining_time_label.config(text=f"Remaining Time: {remaining_time_str}")
     else:
-        remaining_time_label.config(text="Remaining Time: ")
+        remaining_time_label.config(text="Remaining Time: --:--:--")
 
     window.after(1000, update_time)
 
