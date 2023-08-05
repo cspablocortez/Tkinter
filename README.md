@@ -2,11 +2,13 @@
 
  A general-purpose GUI in Python for web requests.
 
- To run on Windows:
+ ## Needed Software
 
- First, make sure you have [Github Desktop](https://desktop.github.com/) installed.
+ * First, make sure you have [Github Desktop](https://desktop.github.com/) installed.
 
- Also [install Python](https://www.python.org/) on your computer.
+ * Also [install Python](https://www.python.org/) on your computer.
+
+ * Install [Visual Studio Code](https://code.visualstudio.com/) or any other text editor.
 
  Set up your GitHub account.
 
