@@ -2,6 +2,8 @@
 
  A general-purpose GUI in Python for web requests.
 
+ ![Screenshot](Screenshot.png)
+
  ## Needed Software
 
  * First, make sure you have [Github Desktop](https://desktop.github.com/) installed.
