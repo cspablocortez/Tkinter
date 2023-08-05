@@ -12,8 +12,9 @@ def time_left_until_input_time(hours, minutes):
 def set_schedule_request():
     try:
         time_value = time_entry.get()
-        hours = int(time_value[:2])
-        minutes = int(time_value[-2:])
+        if (len(time_value)):
+            hours = int(time_value[:2])
+            minutes = int(time_value[-2:])
         remaining_time = time_left_until_input_time(hours, minutes)
         scheduled_time_label.config(text=f"Request Scheduled for: {time_value}")
         remaining_time_str = str(remaining_time).split(".")[0]
