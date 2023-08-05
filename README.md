@@ -14,4 +14,8 @@
 
  Clone the repository by clicking `File > Clone Repository...`
 
+## Running the Program
 
+* Open a new terminal within the Tkinter project.
+
+* Run `python app.py`
