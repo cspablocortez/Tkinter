@@ -1,6 +1,4 @@
-1. Bring in the time remaining window into main app.py
+1. Schedule the HTTP request with a background process*
 
-2. Schedule the HTTP request with a background process*
-
-3. Next class we'll go more in detail about background processes
+2. Show "time reached" messagebox
 

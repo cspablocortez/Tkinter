@@ -12,13 +12,14 @@ def time_left_until_input_time(hours, minutes):
 def set_schedule_request():
     try:
         time_value = time_entry.get()
-        if (len(time_value)):
-            hours = int(time_value[:2])
-            minutes = int(time_value[-2:])
+        hours = int(time_value[:2])
+        minutes = int(time_value[-2:])
+
         remaining_time = time_left_until_input_time(hours, minutes)
         scheduled_time_label.config(text=f"Request Scheduled for: {time_value}")
         remaining_time_str = str(remaining_time).split(".")[0]
         remaining_time_label.config(text=f"Remaining Time: {remaining_time_str}")
+        update_time()
     except ValueError:
         print("Invalid input. Please enter valid integer values for hours and minutes.")
 
@@ -69,5 +70,5 @@ go_button.pack()
 remaining_time_label = tk.Label(window, text="Remaining Time: ")
 remaining_time_label.pack()
 
-update_time()
+# update_time()
 window.mainloop()
