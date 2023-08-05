@@ -18,4 +18,4 @@
 
 * Open a new terminal within the Tkinter project.
 
-* Run `python app.py`
+* Run `python gui.py`
