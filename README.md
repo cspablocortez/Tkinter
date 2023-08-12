@@ -24,6 +24,6 @@
 
 * Open a new terminal in Visual Studio code within the Tkinter project.
 
-Keyboard shortcut `Ctrl + \` `
+Keyboard shortcut ``Ctrl + ```
 
 * Run `python gui.py`
