@@ -8,7 +8,7 @@
 
  * First, make sure you have [Github Desktop](https://desktop.github.com/) installed.
 
- * Also [install Python](https://www.python.org/) on your computer.
+ * Also [install Python](https://www.python.org/) on your computer (use the Windows store).
 
  * Install [Visual Studio Code](https://code.visualstudio.com/) or any other text editor.
 
