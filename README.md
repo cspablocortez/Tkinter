@@ -16,8 +16,14 @@
 
  Clone the repository by clicking `File > Clone Repository...`
 
+ Go to "URL" Section
+
+ Paste in the URL for this repository.
+
 ## Running the Program
 
-* Open a new terminal within the Tkinter project.
+* Open a new terminal in Visual Studio code within the Tkinter project.
+
+Keyboard shortcut `Ctrl + \``
 
 * Run `python gui.py`
